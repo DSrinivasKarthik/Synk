@@ -156,4 +156,240 @@
   .sidebar-item.active {
     @apply bg-accent text-accent-foreground;
   }
+
+  /* Enhanced Editor Styles */
+  .ProseMirror {
+    @apply min-h-[200px] outline-none;
+  }
+
+  .ProseMirror p {
+    @apply my-2;
+  }
+
+  .ProseMirror ul,
+  .ProseMirror ol {
+    @apply my-2 pl-6;
+  }
+
+  .ProseMirror ul {
+    @apply list-disc;
+  }
+
+  .ProseMirror ol {
+    @apply list-decimal;
+  }
+
+  .ProseMirror blockquote {
+    @apply border-l-4 border-gray-300 dark:border-gray-600 pl-4 my-4 italic;
+  }
+
+  .ProseMirror h1 {
+    @apply text-4xl font-bold my-4;
+  }
+
+  .ProseMirror h2 {
+    @apply text-3xl font-bold my-3;
+  }
+
+  .ProseMirror h3 {
+    @apply text-2xl font-bold my-2;
+  }
+
+  .ProseMirror code {
+    @apply bg-gray-100 dark:bg-gray-800 rounded px-1 py-0.5 font-mono text-sm;
+  }
+
+  .ProseMirror pre {
+    @apply bg-gray-100 dark:bg-gray-800 rounded p-4 my-4 overflow-x-auto;
+  }
+
+  .ProseMirror pre code {
+    @apply bg-transparent p-0;
+  }
+
+  .ProseMirror a {
+    @apply text-blue-500 dark:text-blue-400 underline;
+  }
+
+  .ProseMirror img {
+    @apply max-w-full h-auto rounded-lg my-4;
+  }
+
+  /* Task List Styles */
+  .ProseMirror ul[data-type="taskList"] {
+    @apply list-none pl-0;
+  }
+
+  .ProseMirror ul[data-type="taskList"] li {
+    @apply flex items-start gap-2;
+  }
+
+  .ProseMirror ul[data-type="taskList"] li > label {
+    @apply mt-1.5 flex h-4 w-4 items-center justify-center rounded border border-gray-300 dark:border-gray-600;
+  }
+
+  .ProseMirror ul[data-type="taskList"] li > label > input[type="checkbox"] {
+    @apply h-4 w-4 rounded border-gray-300 dark:border-gray-600;
+  }
+
+  .ProseMirror ul[data-type="taskList"] li > div {
+    @apply flex-1;
+  }
+
+  /* Table Styles */
+  .ProseMirror table {
+    @apply w-full border-collapse my-4;
+  }
+
+  .ProseMirror table td,
+  .ProseMirror table th {
+    @apply border border-gray-300 dark:border-gray-600 p-2;
+  }
+
+  .ProseMirror table th {
+    @apply bg-gray-100 dark:bg-gray-800 font-medium;
+  }
+
+  .ProseMirror table tr:nth-child(even) {
+    @apply bg-gray-50 dark:bg-gray-900/50;
+  }
+
+  /* Highlight Styles */
+  .ProseMirror mark {
+    @apply bg-yellow-200 dark:bg-yellow-800 px-0.5 rounded;
+  }
+
+  /* Placeholder styles */
+  .ProseMirror p.is-editor-empty:first-child::before {
+    @apply text-gray-400 dark:text-gray-500;
+    content: attr(data-placeholder);
+    float: left;
+    height: 0;
+    pointer-events: none;
+  }
+
+  /* Floating Menu Styles */
+  .ProseMirror-floating-menu {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700;
+  }
+
+  /* Bubble Menu Styles */
+  .ProseMirror-bubble-menu {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700;
+  }
+
+  /* Toolbar Button Hover Effects */
+  .editor-toolbar button {
+    @apply transition-colors duration-150 ease-in-out;
+  }
+
+  .editor-toolbar button:hover {
+    @apply bg-gray-100 dark:bg-gray-700;
+  }
+
+  .editor-toolbar button.is-active {
+    @apply bg-gray-100 dark:bg-gray-700;
+  }
+
+  /* Text Alignment Styles */
+  .ProseMirror [style*="text-align: center"] {
+    @apply text-center;
+  }
+
+  .ProseMirror [style*="text-align: right"] {
+    @apply text-right;
+  }
+
+  .ProseMirror [style*="text-align: left"] {
+    @apply text-left;
+  }
+
+  /* Quill Editor Styles */
+  .ql-toolbar {
+    @apply border border-gray-200 dark:border-gray-700 rounded-t-lg bg-white dark:bg-gray-800;
+  }
+
+  .ql-container {
+    @apply border border-gray-200 dark:border-gray-700 rounded-b-lg bg-white dark:bg-gray-800 min-h-[200px];
+  }
+
+  .ql-editor {
+    @apply prose dark:prose-invert max-w-none focus:outline-none;
+  }
+
+  .ql-editor p {
+    @apply my-2;
+  }
+
+  .ql-editor ul,
+  .ql-editor ol {
+    @apply my-2 pl-6;
+  }
+
+  .ql-editor ul {
+    @apply list-disc;
+  }
+
+  .ql-editor ol {
+    @apply list-decimal;
+  }
+
+  .ql-editor blockquote {
+    @apply border-l-4 border-gray-300 dark:border-gray-600 pl-4 my-4 italic;
+  }
+
+  .ql-editor h1 {
+    @apply text-4xl font-bold my-4;
+  }
+
+  .ql-editor h2 {
+    @apply text-3xl font-bold my-3;
+  }
+
+  .ql-editor h3 {
+    @apply text-2xl font-bold my-2;
+  }
+
+  .ql-editor code {
+    @apply bg-gray-100 dark:bg-gray-800 rounded px-1 py-0.5 font-mono text-sm;
+  }
+
+  .ql-editor pre {
+    @apply bg-gray-100 dark:bg-gray-800 rounded p-4 my-4 overflow-x-auto;
+  }
+
+  .ql-editor pre code {
+    @apply bg-transparent p-0;
+  }
+
+  .ql-editor a {
+    @apply text-blue-500 dark:text-blue-400 underline;
+  }
+
+  .ql-editor img {
+    @apply max-w-full h-auto rounded-lg my-4;
+  }
+
+  /* Dark mode adjustments for Quill toolbar */
+  .dark .ql-toolbar button,
+  .dark .ql-toolbar .ql-picker {
+    @apply text-gray-300;
+  }
+
+  .dark .ql-toolbar button:hover,
+  .dark .ql-toolbar button.ql-active,
+  .dark .ql-toolbar .ql-picker-label:hover,
+  .dark .ql-toolbar .ql-picker-label.ql-active {
+    @apply text-white;
+  }
+
+  .dark .ql-toolbar button:hover .ql-stroke,
+  .dark .ql-toolbar button.ql-active .ql-stroke {
+    @apply stroke-white;
+  }
+
+  .dark .ql-toolbar button:hover .ql-fill,
+  .dark .ql-toolbar button.ql-active .ql-fill {
+    @apply fill-white;
+  }
 }

@@ -16,7 +16,7 @@ export const Navigation = () => {
                 onClick={() => navigate('/')}
                 className="text-xl font-bold text-gray-900 dark:text-white"
               >
-                Synk Notes
+                Synk Flow
               </button>
             </div>
           </div>
